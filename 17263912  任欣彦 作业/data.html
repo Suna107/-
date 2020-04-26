@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date()测试</title>
+    <script type="text/javascript">
+        //当前时间实例对象
+         var str="2020-04-19 10:30:23";
+         var date=new Date(str);
+   
+
+
+
+        document.write('<br>'+'本地时间');
+        document.write('<br>'+'年'+date.getFullYear());
+        document.write('<br>'+'月'+(date.getMonth()+1));
+        document.write('<br>'+'日'+date.getDate()); 
+        document.write('<br>'+'星期'+date.getDay());
+        document.write('<br>'+'时'+date.getHours());
+        document.write('<br>'+'分'+date.getMinutes());
+        document.write('<br>'+'秒'+date.getSeconds());
+        document.write('<br>'+'毫秒'+date.getMilliseconds());
+        document.write('<br>');
+
+        document.write('<br>'+'全球时间');
+        document.write('<br>'+'年'+date.getUTCFullYear());
+        document.write('<br>'+'月'+(date.getUTCMonth()+1));
+        document.write('<br>'+'日'+date.getUTCDate()); 
+        document.write('<br>'+'星期'+date.getUTCDay());
+        document.write('<br>'+'时'+date.getUTCHours());
+        document.write('<br>'+'分'+date.getUTCMinutes());
+        document.write('<br>'+'秒'+date.getUTCSeconds());
+        document.write('<br>'+'毫秒'+date.getUTCMilliseconds());
+        document.write('<br>');
+  
+        document.write('<br>'+'本地时间与全球时间时间差'+date.getTimezoneOffset());
+        document.write('<br>');
+        document.write('<br>'+'getYear()返回Date对象中的年份值减去1900：'+date.getYear());
+       document.write('<br>');
+      
+        document.write('<br>'+'Date构造函数调用的静态方法');
+         document.write('<br>'+'1970-01-01午夜到现在的时间间隔，用毫秒表述：'+Date.now());
+        document.write('<br>'+'1970-01-01午夜到指定的时间间隔，用毫秒表述：'+Date.parse(str));
+        document.write(Date.UTC(2011, 11, 11, 11, 11, 11)); 
+        document.write('<br>');
+        
+         document.write('<br>'+'原Date对象'+date.toLocaleString());
+        document.write('<br>'+date.setFullYear(2010));
+        document.write('<br>'+date.setMonth(1));
+         document.write('<br>'+date.setDate(1));
+        document.write('<br>'+date.setHours(5));
+        document.write('<br>'+date.setSeconds(30));
+         document.write('<br>'+date.setMilliseconds(10));
+         var da = new Date(date);
+         document.write("<br/>" +'修改后的Date对象'+ da.toLocaleString());
+        document.write('<br>');
+
+        document.write('<br>'+'全球时间原Date对象'+date.toLocaleString());
+        document.write('<br>'+date.setUTCFullYear(2000));
+        document.write('<br>'+date.setUTCMonth(2));
+        document.write('<br>'+date.setUTCDate(3));
+        document.write('<br>'+date.setUTCHours(6));
+        document.write('<br>'+date.setUTCSeconds(24));
+        document.write('<br>'+date.setUTCMilliseconds(20));
+        var da = new Date(date);
+        document.write("<br/>" +'全球时间修改后的Date对象'+ da.toLocaleString());    
+        document.write('<br>');
+            
+        document.write('<br>'+'setTime设置毫秒'+date.setTime(1356015783872)); 
+         var da = new Date(date);
+        document.write("<br/>" + da.toLocaleString()); 
+        document.write('<br>');
+
+               
+        document.write('<br>'+'setYear()设置一个Date对象的年份值：'+date.setYear(22));
+        var da = new Date(date);
+        document.write("<br/>" + da.getFullYear()); 
+
+         document.write('<br>'+date.toString());
+         document.write('<br>'+date.toDateString());
+         document.write('<br>'+date.toTimeString());
+           document.write('<br>'+date.toUTCString());
+         document.write('<br>'+date.toISOString());
+         document.write('<br>'+date.toJSON());
+         document.write('<br>'+date.toLocaleDateString());
+         document.write('<br>'+date.toLocaleString());
+          document.write('<br>'+date.toLocaleTimeString());
+          document.write('<br>');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

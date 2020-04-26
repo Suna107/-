@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RegExp()测试</title>
+    <script type="text/javascript">
+      
+        var str = 'hello world nwdnacan 11 10  0098 java wab  test zhyixing \tab';
+        var p= new RegExp();
+        var p1 = /[ab]/ig;//查找方括号之间的任何字符
+        var p2 = /[^ac]/ig;//查找任何不在方括号之间的字符。
+        var p3 = /[0-9]/ig;//	查找任何从 0 至 9 的数字。
+        var p5 = /\w/ig;//任意ascall吗字符 
+        var p6 = /\d/ig;//查找数字。
+        var p7 = /\0/ig;//	查找 NUL 字符。
+        var p8 = /\f/ig;//查找换页符。
+        var p9 = /\r/ig;//查找回车符
+        var p10 = /\n/ig;//查找换行符
+        var p11 = /\t/ig;//查找制表符
+        var p12 = /\127/ig;//查找以八进制数 xxx 规定的字符。（w）
+        var p13 = /\57/ig;//查找以十六进制数 dd 规定的字符。（W)
+        var p14 = /\u0057/ig;//查找以十六进制数 xxxx 规定的 Unicode 字符。（W)、
+        var p15 = /n+/ig;//匹配任何包含至少一个 n 的字符串
+        var p16 = /\w+/ig;//对至少一个单词字符进行全局搜索：
+        var p17 = /n*/ig;//匹配任何包含零个或多个 n 的字符串。
+
+
+        var result1= str.search(p3);
+        var result2 = str.match(p12);
+        var result3 = str.replace(p14, '9');
+        var result4 = str.split(p9);
+         var result5 = p17.test(str);
+        console.log(result1);
+        console.log(result2);
+        console.log(result3);
+        console.log(result4);
+        console.log(result5);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

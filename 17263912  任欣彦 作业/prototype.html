@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+          function Student(name,age,gender){
+           // this=new
+           this.name=name;
+           this.age=age;
+           this.gender=gender; 
+        }
+         Student.prototype.run=function(){
+             alert('run');
+         }
+           Student.prototype.say=function(){
+            alert('say');
+         }
+            Student.prototype.walk=function(){
+             alert('walk');
+         }
+         Student.prototype={
+           
+             color:function(){
+                 alert('color');
+             },
+             enjoy:function(){
+                 alert('enjoy');
+             }
+         }
+    
+        var stu1 = new Student('张三', 30, '女');
+        var stu2 = new Student('tom', 33, '男');
+
+        stu1.color();
+        stu1.say();
+  
+           console.log(stu1.constructor);
+             console.log(stu1.run == stu2.run);
+           
+           stu1.run();
+           stu2.run();
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
